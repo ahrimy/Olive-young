@@ -1,2 +1,3 @@
-# Olive-young
-java-gui with swing package
+## Project
+- clone website ***[Olive Young](https://www.oliveyoung.co.kr/)***
+- java gui
