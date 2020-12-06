@@ -7,16 +7,11 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-
-
-
 public class CartAllPanel extends JPanel{
 		
 	HeadBoard head_board = null; // 최상단 
 	CartTopPanel topPanel = null; // 상단
-	CartMidPanel midPanel = null; // 중단
-	CartBotPanel botPanel = null; // 하단
-	
+	CartMidPanel midPanel = null; // 중단	
 	
 	public CartAllPanel(){
 		setLayout(null);

@@ -13,7 +13,6 @@ public class Main {
 		FileManager.instance.loadUser("user.txt");
 		FileManager.instance.loadStore("store.txt");
 		FileManager.instance.loadQnA("qna.txt");
-		QnAManager.qnaManager.getList();
 		
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension screenSize = tk.getScreenSize();

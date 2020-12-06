@@ -1,6 +1,6 @@
 메이크업_클리오_클리오킬커버파운웨어쿠션XP_./src/images/base01.jpg_20160_80_false
 메이크업_데싱디바_데싱디바 여름매니/페디 골라담기_./src/images/nail01.jpg_9800_70_false
-메이크업_바비브라운_바비브라운엑스트라립틴트_./src/images/lip01.jpg_36550_75_false
+메이크업_바비브라운_바비브라운엑스트라립틴트_./src/images/lip01.jpg_36550_74_false
 메이크업_웨이크메이크_웨이크메이크무드스타일러_./src/images/eye01.jpg_19950_70_false
 바디케어_트리헛_트리헛시어슈가 스크럽모로칸 로즈_./src/images/body01.jpg_12640_70_false
 바디케어_낫포유_낫포유클리어바디미스트_./src/images/body02.jpg_15900_70_false

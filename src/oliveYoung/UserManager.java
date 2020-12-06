@@ -28,8 +28,6 @@ public class UserManager {
 			}
 		}
 
-		// System.out.println("check : " + check);
-
 		if (check == -1) {
 			User temp = new User();
 			temp.userName = joinName;

@@ -67,14 +67,12 @@ public class CartMidPanel extends JPanel implements ActionListener, ItemListener
 			cart.elseInfo.get(i).check.setSelected(true);
 			cart.elseInfo.get(i).check.addItemListener(this);
 			add(cart.elseInfo.get(i).check);// 체크박스 추가
-			System.out.println(
-					"buyList 갯수3 : " + UserManager.usermanager.userList.get(UserManager.logIdx).cart.buyList.size());
+
 			/* 이미지 */
 			JLabel imageLabel = new JLabel(makeImage(cart.cartList.get(i).imageFile));
 			imageLabel.setBounds(300, 100 + 220 * i, 200, 200);
 			add(imageLabel);
-			System.out.println(
-					"buyList 갯수4 : " + UserManager.usermanager.userList.get(UserManager.logIdx).cart.buyList.size());
+			
 			/* 회사 이름 */
 			JLabel titleLabel = new JLabel(cart.cartList.get(i).itemTitleName);
 			titleLabel.setBounds(550, 100 + 220 * i, 200, 50);
@@ -83,14 +81,12 @@ public class CartMidPanel extends JPanel implements ActionListener, ItemListener
 			JLabel fullLabel = new JLabel(cart.cartList.get(i).itemFullName);
 			fullLabel.setBounds(550, 180 + 220 * i, 200, 50);
 			add(fullLabel);
-			System.out.println(
-					"buyList 갯수5 : " + UserManager.usermanager.userList.get(UserManager.logIdx).cart.buyList.size());
+			
 			/* 판매가 */
 			JLabel priceLabel = new JLabel((cart.cartList.get(i).price + "원"));
 			priceLabel.setBounds(800, 100 + 220 * i, 200, 50);
 			add(priceLabel);
-			System.out.println(
-					"buyList 갯수6 : " + UserManager.usermanager.userList.get(UserManager.logIdx).cart.buyList.size());
+		
 			/* 오늘드림 */
 			if (cart.cartList.get(i).today) {
 				Font font = new Font("", Font.BOLD, 40);
@@ -125,8 +121,6 @@ public class CartMidPanel extends JPanel implements ActionListener, ItemListener
 				((JLabel) cart.elseInfo.get(i).count.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);// 가운데정렬
 				cart.elseInfo.get(i).count.addActionListener(this);
 				add(cart.elseInfo.get(i).count);
-				System.out.println("buyList 갯수7 : "
-						+ UserManager.usermanager.userList.get(UserManager.logIdx).cart.buyList.size());
 			}
 
 			/* 구매가 */
@@ -243,17 +237,6 @@ public class CartMidPanel extends JPanel implements ActionListener, ItemListener
 					set();
 					revalidate();
 					repaint();
-					/*this.remove(cart.elseInfo.get(i).change);
-					this.remove(cart.elseInfo.get(i).putCount);
-					revalidate();
-					repaint();
-					cart.elseInfo.get(i).count.setSelectedIndex(cart.cartList.get(i).buyCount - 1);
-					cart.elseInfo.get(i).count.setBounds(1000, 100 + +220 * i, 100, 50);
-					((JLabel) cart.elseInfo.get(i).count.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);// 가운데정렬
-					cart.elseInfo.get(i).count.addActionListener(this);
-					add(cart.elseInfo.get(i).count);
-					revalidate();
-					repaint();*/
 				}else {
 				cart.elseInfo.get(i).sum.setText(cart.cartList.get(i).buyCount * cart.cartList.get(i).price + "원");
 				label.setText("총 결제 금액 : " + totalPrice() + "원");

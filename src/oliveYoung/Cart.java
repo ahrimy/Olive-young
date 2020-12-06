@@ -2,9 +2,6 @@ package oliveYoung;
 
 import java.util.ArrayList;
 
-
-
-
 // 아이템 타이틀 이름 , 아이템 전체 이름 , 판매가  , 
 
 public class Cart {

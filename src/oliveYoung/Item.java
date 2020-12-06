@@ -12,10 +12,6 @@ public class Item {
 	
 	public Item() {
 	}
-public void print(){
-	System.out.println(category+" "+itemName+" "+imageName+" "+price+" "+count+" "+onlyOnline);
-	
-}
 	public Item(String category, String itemTitle,String itemName, String imageName, int price, int count, boolean onlyOnline) {
 		this.category = category;
 		this.itemTitle = itemTitle;

@@ -99,11 +99,6 @@ public class QnAlistPanel extends JPanel implements ActionListener {
 			}
 		}
 
-		System.out.println("== 로드후 tempTitleBtn[] 출력 ==");
-		for (int i = 0; i < tempTitleBtn.length; i++) {
-			System.out.println(tempTitleBtn[i].getText());
-		}
-
 		upDateBtn();
 	}
 
@@ -142,9 +137,6 @@ public class QnAlistPanel extends JPanel implements ActionListener {
 		if (lastIdx > qnaNum) {
 			lastIdx = qnaNum;
 		}
-
-		System.out.println("startIdx = " + startIdx);
-		System.out.println("lastIdx = " + lastIdx);
 
 		// 타이틀 버튼 다시 붙이기
 		titleBtn = new JButton[maxNum];
@@ -214,7 +206,6 @@ public class QnAlistPanel extends JPanel implements ActionListener {
 
 		for (int i = 0; i < 5; i++) {
 			if (e.getSource() == pageBtn[i]) {
-				System.out.println("눌린 페이지 : " + pageBtn[i].getText());
 				pageNum = Integer.parseInt(pageBtn[i].getText());
 
 				// 보드 업데이트(눌린 페이지에 있는 버튼들로!)
@@ -228,7 +219,6 @@ public class QnAlistPanel extends JPanel implements ActionListener {
 				// loadIdx는 버튼의 번호
 				loadIdx = i;
 
-				System.out.println("loadIdx : " + loadIdx);
 				for (int j = 0; j < QnAManager.qnaManager.qnaList.size(); j++) {
 					if (UserManager.usermanager.getId().equals(QnAManager.qnaManager.qnaList.get(j).logId)
 							&& titleBtn[loadIdx].getText().equals(QnAManager.qnaManager.qnaList.get(j).title)) {

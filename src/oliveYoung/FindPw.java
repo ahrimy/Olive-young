@@ -118,16 +118,7 @@ public class FindPw extends JPanel implements ActionListener, MouseListener{
 	@Override
 	public void mousePressed(MouseEvent e) {
 		int x = e.getX(); int y = e.getY();
-		System.out.println(x + " " + y);
-		
-		
-		// 텍스트 필드를 클릭하면 초기화하는 방법???
-		/*
-		 * if(x >= name_tf.getX() || x < name_tf.getX() + name_tf.getWidth() || y >=
-		 * name_tf.getY() || y < name_tf.getX() + name_tf.getHeight()) {
-		 * name_tf.setText(""); }
-		 */
-		
+		System.out.println(x + " " + y);	
 
 	}
 

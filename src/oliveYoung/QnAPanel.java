@@ -55,7 +55,6 @@ public class QnAPanel extends JPanel implements ActionListener, MouseListener {
 		
 		// 로그인중인 회원의 qna개수
 		checkData();
-		System.out.println("QnA_list_panel.qnaNum = " + QnA_list_panel.qnaNum);
 		QnA_list_panel.loadSet();
 	}
 	
@@ -172,14 +171,11 @@ public class QnAPanel extends JPanel implements ActionListener, MouseListener {
 
 		// 문의하기(저장)
 		if (e.getSource() == addBtn) {
-			System.out.println("눌렸다.");
-
 			if (title_tf.getText() == "" || text_tf.getText() == "") {
 				JOptionPane.showMessageDialog(null, "제목과 내용을 입력해주세요!", "안내", JOptionPane.WARNING_MESSAGE);
 			} else {
 				JOptionPane.showMessageDialog(null, "문의하기가 등록되었습니다.", "안내", JOptionPane.WARNING_MESSAGE);
 				QnAManager.qnaManager.addQnA(title_tf.getText(), text_tf.getText(), UserManager.usermanager.getId()); // arrayList 저장
-				QnAManager.qnaManager.getList();	// 저장된 arrayList 출력
 				QnAManager.qnaManager.saveQnA();	// data로 만들어 저장
 				QnA_list_panel.setTitleBtn();
 				QnA_list_panel.upDateBtn();
@@ -212,8 +208,6 @@ public class QnAPanel extends JPanel implements ActionListener, MouseListener {
 	public void mousePressed(MouseEvent e) {
 		int x = e.getX();
 		int y = e.getY();
-
-		System.out.println(x + " : " + y);
 	}
 
 	@Override

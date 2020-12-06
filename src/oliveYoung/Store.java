@@ -33,9 +33,6 @@ public class Store {
 		System.out.println(street);
 		System.out.println(startCode + " " + lastCode);
 		System.out.println(storeName);
-		for (int i = 0; i < itemList.size(); i++) {
-			itemList.get(i).print();
-		}
 	}
 
 	public int getItemCount(Item item) {

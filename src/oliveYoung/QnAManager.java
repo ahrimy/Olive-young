@@ -23,12 +23,6 @@ public class QnAManager {
 		qnaList.add(temp);
 	}
 
-	public void getList() {
-		for (int i = 0; i < qnaList.size(); i++) {
-			System.out.println(qnaList.get(i).title + " : " + qnaList.get(i).text + " : " + qnaList.get(i).logId);
-		}
-	}
-
 	public String saveQnA() {
 		String data = "";
 
@@ -43,8 +37,6 @@ public class QnAManager {
 				data += "\n";
 			}
 		}
-
-		// System.out.println("QnA데이터 출력  \n" + data);
 
 		return data;
 	}
@@ -66,15 +58,10 @@ public class QnAManager {
 
 	public void removeQnA() {
 
-		System.out.println("qnaList.size() = " + qnaList.size());
-		System.out.println("현재 로그인한 아이디 = " + UserManager.usermanager.userList.get(UserManager.logIdx).userId);
-
-		
 		int i=0; 
 		while(i < qnaList.size()) {
 			if (QnAManager.qnaManager.qnaList.get(i).logId.equals(UserManager.usermanager.userList.get(UserManager.logIdx).userId)) {
 				qnaList.remove(i);
-				System.out.println("qnaList.size() = " + qnaList.size());
 				i = 0;
 			}else {
 				i += 1;				
@@ -82,11 +69,7 @@ public class QnAManager {
 		
 		}
 		
-		
-		System.out.println(qnaList);
-		
 		String data = saveQnA();	
-		System.out.println(data);
 	}
 
 }
